@@ -14,17 +14,20 @@ Dictionaries are collections of associated pairs of items where each pair consis
 >>> capitals = {'Iowa':'DesMoines', 'Wisconsin':'Madison'}
 >>> capitals
 {'Wisconsin': 'Madison', 'Iowa': 'DesMoines'}
->>> capitals = {'Iowa':'DesMoines','Wisconsin':'Madison'}
->>> capitals
-{'Iowa': 'DesMoines', 'Wisconsin': 'Madison'}
 >>> print(capitals['Iowa'])
 DesMoines
 >>> capitals['Utah'] = 'SaltLakeCity'
 >>> print(capitals)
 {'Utah': 'SaltLakeCity', 'Iowa': 'DesMoines', 'Wisconsin': 'Madison'}
+```
+
+```python
 >>> capitals['California'] = 'Sacramento'
 >>> print(len(capitals))
 4
+```
+
+```python
 >>> for i in capitals:
 ...     print(capitals[i], 'is the capitol of', i)
 ... 
@@ -32,6 +35,9 @@ Sacramento is the capitol of California
 SaltLakeCity is the capitol of Utah
 DesMoines is the capitol of Iowa
 Madison is the capitol of Wisconsin
+```
+
+```python
 >>> capitals['Wisconsin']
 'Madison'
 >>> 'Florida' in capitals
@@ -57,23 +63,33 @@ True
 >>> extensions = {'brian':1410, 'jake':1137}
 >>> extensions
 {'jake': 1137, 'brian': 1410}
+```
+
+```python
 >>> extensions.keys()
 dict_keys(['jake', 'brian'])
 >>> list(extensions.keys())
 ['jake', 'brian']
+```
+
+```python
 >>> extensions.values()
 dict_values([1137, 1410])
 >>> list(extensions.values())
 [1137, 1410]
+```
+
+```python
 >>> extensions.items()
 dict_items([('jake', 1137), ('brian', 1410)])
 >>> list(extensions.items())
 [('jake', 1137), ('brian', 1410)]
+```
+
+```python
 >>> extensions.get('brian')
 1410
 >>> extensions.get('steve')
 >>> extensions.get('steve', 'NO ENTRY')
 'NO ENTRY'
 ```
-
-
