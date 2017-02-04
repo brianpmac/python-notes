@@ -19,9 +19,6 @@ DesMoines
 >>> capitals['Utah'] = 'SaltLakeCity'
 >>> print(capitals)
 {'Utah': 'SaltLakeCity', 'Iowa': 'DesMoines', 'Wisconsin': 'Madison'}
-```
-
-```python
 >>> capitals['California'] = 'Sacramento'
 >>> print(len(capitals))
 4
@@ -65,6 +62,8 @@ True
 {'jake': 1137, 'brian': 1410}
 ```
 
+Use the `list()` function to extract keys, values and items into lists:
+
 ```python
 >>> extensions.keys()
 dict_keys(['jake', 'brian'])
@@ -85,6 +84,8 @@ dict_items([('jake', 1137), ('brian', 1410)])
 >>> list(extensions.items())
 [('jake', 1137), ('brian', 1410)]
 ```
+
+The `get()` method returns a the value of the specified key. If no matching key, it returns `None`. A second alt argurment can be provided that returns if no matching key found:
 
 ```python
 >>> extensions.get('brian')
