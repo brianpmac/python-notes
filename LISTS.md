@@ -49,7 +49,7 @@ Suppose we want to find the first 10 perfect squares. We could use a `for` loop:
 [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 ```
 
-A list comprehension allows us to do this one step:
+But a list comprehension allows us to do this one step:
 
 ```python
 >>> sqlist = [x*x for x in range(1,11)]
