@@ -29,3 +29,46 @@ range(5, 10)
 >>> list(range(10,1,-1))
 [10, 9, 8, 7, 6, 5, 4, 3, 2]
 ```
+
+## List comprehensions
+
+List comprehensions are used to construct lists in a very natural, easy way. Basic syntax of a list comprehension:
+
+```python
+[ expression for item in list if conditional ]
+```
+
+Suppose we want to find the first 10 perfect squares. We could use a `for` loop:
+
+```python
+>>> sqlist = []
+>>> for x in range(1,11):
+...     sqlist.append(x*x)
+... 
+>>> sqlist
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+```
+
+A list comprehension allows us to do this one step:
+
+```python
+>>> sqlist = [x*x for x in range(1,11)]
+>>> sqlist
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+```
+
+You can also add a selection criteria so that only certain items get added to the list:
+
+```python
+>>> sqlist = [x*x for x in range(1,11) if x%2 != 0]
+>>> sqlist
+[1, 9, 25, 49, 81]
+```
+
+Any sequence that supports iteration can be used within a list comprehension to construct a new list:
+
+```python
+>>> [char.upper() for char in 'comprehension' if char not in 'aeiou']
+['C', 'M', 'P', 'R', 'H', 'N', 'S', 'N']
+```
+
