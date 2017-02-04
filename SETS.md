@@ -46,35 +46,58 @@ False
 | `clear`         | `aset.clear()`                | Removes all elements from the set                              |
 
 ```python
->>> my_set
-{False, 'cat', 3, 4.5, 6}
+>>> my_set = {False, 'cat', 3, 4.5, 6}
 >>> your_set = {99, 3, 100}
+```
+
+```python
 >>> my_set.union(your_set)
 {False, 3, 4.5, 99, 6, 100, 'cat'}
 >>> my_set | your_set
 {False, 3, 4.5, 99, 6, 100, 'cat'}
+```
+
+```python
 >>> my_set.intersection(your_set)
 {3}
 >>> my_set & your_set
 {3}
+```
+
+```python
 >>> my_set.difference(your_set)
 {False, 'cat', 4.5, 6}
 >>> my_set - your_set
 {False, 'cat', 4.5, 6}
+```
+
+```python
 >>> {3, 100}.issubset(your_set)
 True
 >>> {3, 100} <= your_set
 True
+```
+
+```python
 >>> my_set.add('house')
 >>> my_set
 {False, 3, 4.5, 6, 'house', 'cat'}
+```
+
+```python
 >>> my_set.remove(4.5)
 >>> my_set
 {False, 3, 6, 'house', 'cat'}
+```
+
+```python
 >>> my_set.pop()
 False
 >>> my_set
 {3, 6, 'house', 'cat'}
+```
+
+```python
 >>> my_set.clear()
 >>> my_set
 set()
