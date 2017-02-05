@@ -1,6 +1,6 @@
 ## Sets
 
-A set is an unordered collection of zero or more immutable Python data objects. Sets do not allow duplicates and are written as comma-delimited values enclosed in curly braces. The empty set is represented by set(). Sets are heterogeneous, and the collection can be assigned to a variable as below.
+A set is an unordered collection of zero or more **immutable** Python data objects. Sets do not allow duplicates and are written as comma-delimited values enclosed in curly braces. The empty set is represented by `set()`. Sets are **heterogeneous**, and the collection can be assigned to a variable as below:
 
 ```python
 >>> {3, 6, 'cat', 4.5, False}
