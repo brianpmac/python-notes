@@ -13,21 +13,42 @@
 ```python
 >>> 'Brian'
 'Brian'
+```
+
+```python
 >>> my_name = 'Brian'
 >>> my_name[3]
 'a'
+```
+
+```python
 >>> my_name * 2
 'BrianBrian'
+```
+
+```python
 >>> len(my_name)
 5
+```
+
+```python
 >>> my_name
 'Brian'
 >>> my_name.upper()
 'BRIAN'
+```
+
+```python
 >>> my_name.center(9)
 '  Brian  '
+```
+
+```python
 >>> my_name.find('i')
 2
+```
+
+```python
 >>> my_name.split('i')
 ['Br', 'an']
 ```
