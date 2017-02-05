@@ -1,3 +1,15 @@
+## Lists
+
+A `list` is an ordered collection of zero or more references to Python data objects. Lists are written as comma-delimited values enclosed in square brackets. The empty list is simply `[ ]`. Lists are **heterogeneous**, meaning that the data objects need not all be from the same class and the collection can be assigned to a variable as below. The following fragment shows a variety of Python data objects in a list:
+
+```python
+>>> [1, 3, True, 6.5, 'Sally']
+[1, 3, True, 6.5, 'Sally']
+>>> my_list = [1, 3, True, 6.5, 'Sally']
+>>> my_list
+[1, 3, True, 6.5, 'Sally']
+```
+
 ## List methods
 
 | **Method name** | **Use**                | **Explanation**                                     |  
