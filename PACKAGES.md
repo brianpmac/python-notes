@@ -76,15 +76,15 @@ Contrarily, when using syntax like `import item.subitem.subsubitem`, each item e
 
 ## Useful Packages
 
-**Boltons:**
-https://github.com/mahmoud/boltons
-https://boltons.readthedocs.io/en/latest/
+**Boltons:**  
+https://github.com/mahmoud/boltons  
+https://boltons.readthedocs.io/en/latest/  
 
-**Flask:**
-https://github.com/pallets/flask
-http://flask.pocoo.org/docs/0.12/
+**Flask:**  
+https://github.com/pallets/flask  
+http://flask.pocoo.org/docs/0.12/  
 
-**Requests:**
-https://github.com/kennethreitz/requests
-http://docs.python-requests.org/en/master/
+**Requests:**  
+https://github.com/kennethreitz/requests  
+http://docs.python-requests.org/en/master/  
 
