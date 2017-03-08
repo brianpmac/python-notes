@@ -1,5 +1,22 @@
 ## Flask notes
 
+### Starting the app
+
+Using this at the bottom of the main file is deprecated as of version 0.12:
+
+```python
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+
+Instead, simply do not include the above in your file, and do this on the command line:
+
+```bash
+$ export FLASK_APP=/path/to/file.py
+$ export FLASK_DEBUG=True
+$ flask run
+```
+
 ### Jinja2
 
 Strip all leading and trailing whitespace from Jinja blocks:
