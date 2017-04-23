@@ -6,7 +6,7 @@ Create superuser:
 $ python manage.py createsuperuser
 ```
 
-Run these everytime you make changes to your app:
+Run these everytime you make changes to your models:
 
 ```bash
 $ python manage.py makemigrations
