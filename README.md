@@ -7,3 +7,4 @@ Sources:
 - http://stackoverflow.com/questions/684171/how-to-re-import-an-updated-package-while-in-python-interpreter
 - http://stackoverflow.com/questions/35775207/remove-unnecessary-whitespace-from-jinja-rendered-template
 - https://djangosnippets.org/snippets/2421/
+- https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django
