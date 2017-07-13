@@ -38,6 +38,12 @@ with open("some_file.txt") as open_file:
 
 ## Counts
 
+`?` something that occurs 0 or 1 times. Has the effect of making a thing optional, e.g. parentheses in a phone number.
+
+`*` something that occurs at least 0 times.
+
+`+` something that occurs at least once.
+
 `\w{3}` matches any three word characters in a row.
 
 `\w{,3}` matches 0, 1, 2, or 3 word characters in a row.
@@ -53,3 +59,43 @@ with open("some_file.txt") as open_file:
 `\w+` matches 1 or more word characters. Like *, it has no upper limit, but it has to occur at least once.
 
 `.findall(pattern, text, flags)` finds all non-overlapping occurrences of the pattern in the text.
+
+## Sets
+
+`[abc]` this is a set of the characters 'a', 'b', and 'c'. It'll match any of those characters, in any order, but only once each.
+
+`[a-z]`, `[A-Z]`, or `[a-zA-Z]` ranges that'll match any/all letters in the English alphabet in lowercase, uppercase, or both upper and lowercases.
+
+`[0-9]` range that'll match any number from 0 to 9. You can change the ends to restrict the set.
+
+## Negation
+
+`[^abc]` a set that will not match, and, in fact, exclude, the letters 'a', 'b', and 'c'.
+
+`re.IGNORECASE` or `re.I` flag to make a search case-insensitive. re.match('A', 'apple', re.I) would find the 'a' in 'apple'.
+
+`re.VERBOSE` or `re.X` flag that allows regular expressions to span multiple lines and contain (ignored) whitespace and comments.
+
+## Groups
+
+`([abc])` creates a group that contains a set for the letters 'a', 'b', and 'c'. This could be later accessed from the Match object as `.group(1)`.
+
+`(?P<name>[abc])` creates a named group that contains a set for the letters 'a', 'b', and 'c'. This could later be accessed from the Match object as `.group('name')`.
+
+`.groups()` method to show all of the groups on a Match object.
+
+`re.MULTILINE` or `re.M` flag to make a pattern regard lines in your text as the beginning or end of a string.
+
+`^` specifies, in a pattern, the beginning of the string.
+
+`$` specifies, in a pattern, the end of the string.
+
+## Compiling and Loops
+
+`re.compile(pattern, flags)` method to pre-compile and save a regular expression pattern, and any associated flags, for later use.
+
+`.groupdict()` method to generate a dictionary from a Match object's groups. The keys will be the group names. The values will be the results of the patterns in the group.
+
+`re.finditer()` method to generate an iterable from the non-overlapping matches of a regular expression. Very handy for for loops.
+
+`.group()` method to access the content of a group. 0 or none is the entire match. 1 through how ever many groups you have will get that group. Or use a group's name to get it if you're using named groups.
