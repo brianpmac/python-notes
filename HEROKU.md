@@ -50,6 +50,11 @@ web: gunicorn djangoprojectnamehere.wsgi --log-file -
 
 ## settings.py
 
+First, create your Heroku app so that you can push environment variables to Heroku during setup:
+```
+$ heroku create appnamehere
+```
+
 Get security key from Heroku environment variables, set default for local development:
 
 ```python
@@ -79,6 +84,10 @@ To take advantage of Heroku's free / auto-managed SSL certificates, add the foll
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = bool(os.environ.get('DJANGO_SSL_REDIRECT', False))
 ```
+
+Then set a Heroku DJANGO_SSL_REDIRECT environment variable to True:
+
+`$ heroku config:set DJANGO_SSL_REDIRECT=True`
 
 Modify allowed hosts to include your domain name, app name, and localhost:
 
@@ -142,10 +151,9 @@ $ git commit -m 'Deployment settings'
 $ git push origin master
 ```
 
-Create Heroku app / remote repository, and push:
+Push to Heroku:
 
 ```
-$ heroku create appnamehere
 $ git push heroku master
 ```
 
