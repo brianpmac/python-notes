@@ -124,6 +124,11 @@ STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 ```
 
+To add additional logging for collectstatic push the following to Heroku:
+```
+$ heroku config:set DEBUG_COLLECTSTATIC=1
+```
+
 ## wsgi.py
 
 Finally, modify your wsgi.py to the following:
