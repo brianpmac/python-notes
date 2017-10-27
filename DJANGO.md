@@ -29,3 +29,14 @@ $ python manage.py migrate
 
 {% include "includes/tabs.html" with active_tab='tab1' %}
 ```
+
+### Generate a Secret Key
+
+```bash
+$ python -c 'import random; import string; print("".join([random.SystemRandom().choice("{}{}{}".format(string.ascii_letters, string.digits, string.punctuation)) for i in range(50)]))'
+```
+
+Generate key and push to Heroku:
+```bash
+heroku config:set DJANGO_SECRET_KEY=$(python -c 'import random; import string; print("".join([random.SystemRandom().choice("{}{}{}".format(string.ascii_letters, string.digits, string.punctuation)) for i in range(50)]))')
+```
