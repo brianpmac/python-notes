@@ -8,3 +8,4 @@ Sources:
 - http://stackoverflow.com/questions/35775207/remove-unnecessary-whitespace-from-jinja-rendered-template
 - https://djangosnippets.org/snippets/2421/
 - https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django
+- https://gist.github.com/ndarville/3452907
