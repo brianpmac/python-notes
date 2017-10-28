@@ -109,6 +109,18 @@ Don't forget to set your timezone!
 
 Finally for static file serving, implement the following: 
 
+Add whitenoise to your middleware in settings.py above all other middleware except SecurityMiddleware:
+
+```python
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    ...
+]
+```
+
+Then replace your static file settings in settings.py:
+
 ```python
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
@@ -121,8 +133,10 @@ STATIC_URL = '/static/'
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 ```
+
+NOTE: If you are having issues with deploying to Heroku due to missing static files referenced by third party CSS or JS, you can omit the above STATICFILES_STORAGE setting and it should allow you to deploy successfully. 
 
 To add additional logging for collectstatic push the following to Heroku:
 ```
