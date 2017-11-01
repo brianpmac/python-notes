@@ -9,3 +9,4 @@ Sources:
 - https://djangosnippets.org/snippets/2421/
 - https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django
 - https://gist.github.com/ndarville/3452907
+- https://chrxr.com/django-error-logging-configuration-heroku/
